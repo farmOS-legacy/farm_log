@@ -499,6 +499,46 @@ function farm_log_input_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'log-farm_input-field_farm_time_spent'.
+  $field_instances['log-farm_input-field_farm_time_spent'] = array(
+    'bundle' => 'farm_input',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'How long did this input take?',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'log',
+    'field_name' => 'field_farm_time_spent',
+    'label' => 'Time spent',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => ' hour|hours',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 8,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Application Method');
@@ -507,6 +547,7 @@ function farm_log_input_field_default_field_instances() {
   t('Describe the quantity of this input, using a value and a unit of measurement. For example, if you used 10 gallons of liquid fertilizer, enter "10" in the Value field, and "gallons" in the Units field. As you type the unit, you will have the option of selecting from units that you\'ve entered in the past.');
   t('Files');
   t('Geometry');
+  t('How long did this input take?');
   t('How was this input applied?');
   t('Material');
   t('Notes');
@@ -514,6 +555,7 @@ function farm_log_input_field_default_field_instances() {
   t('Purpose');
   t('Quantity');
   t('Source/Manufacturer');
+  t('Time spent');
   t('This field is optional. It allows you to store geospatial data along with this input.');
   t('What areas is this input being applied to?');
   t('What assets do this input log pertain to?');

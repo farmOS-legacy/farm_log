@@ -299,16 +299,58 @@ function farm_log_harvest_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'log-farm_harvest-field_farm_time_spent'.
+  $field_instances['log-farm_harvest-field_farm_time_spent'] = array(
+    'bundle' => 'farm_harvest',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'How long did this harvest take?',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'log',
+    'field_name' => 'field_farm_time_spent',
+    'label' => 'Time spent',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => ' hour|hours',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 8,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Assets');
   t('Describe the quantity of this harvest, using a value and a unit of measurement. For example, if you harvested 100 pounds of potatoes, enter "100" in the Value field, and "lbs" in the Units field. As you type the unit, you will have the option of selecting from units that you\'ve entered in the past.');
   t('Files');
   t('Geometry');
+  t('How long did this harvest take?');
   t('Notes');
   t('Photo(s)');
   t('Quantity');
   t('This field is optional. It allows you to store geospatial data along with this harvest.');
+  t('Time spent');
   t('What assets do this harvest log pertain to?');
 
   return $field_instances;
