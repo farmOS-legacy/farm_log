@@ -262,14 +262,63 @@ function farm_log_activity_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'log-farm_activity-field_farm_rating'.
+  $field_instances['log-farm_activity-field_farm_rating'] = array(
+    'bundle' => 'farm_activity',
+    'default_value' => array(),
+    'deleted' => 0,
+    'description' => 'How well did this activity work?',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'fivestar',
+        'settings' => array(
+          'expose' => TRUE,
+          'style' => 'average',
+          'text' => 'average',
+          'widget' => array(
+            'fivestar_widget' => NULL,
+          ),
+        ),
+        'type' => 'fivestar_formatter_default',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'log',
+    'field_name' => 'field_farm_rating',
+    'label' => 'Rating',
+    'required' => 0,
+    'settings' => array(
+      'allow_clear' => 1,
+      'allow_ownvote' => 1,
+      'allow_revote' => 1,
+      'stars' => 5,
+      'target' => 'none',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'fivestar',
+      'settings' => array(
+        'widget' => array(
+          'fivestar_widget' => 'default',
+        ),
+      ),
+      'type' => 'stars',
+      'weight' => 8,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Areas');
   t('Assets');
   t('Files');
   t('Geometry');
+  t('How well did this activity work?');
   t('Notes');
   t('Photo(s)');
+  t('Rating');
   t('This field is optional. It allows you to store geospatial data along with this activity.');
   t('What areas did this activity take place in?');
   t('What assets do this activity log pertain to?');

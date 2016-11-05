@@ -178,6 +178,19 @@ function farm_log_activity_views_default_views() {
   $handler->display->display_options['fields']['field_farm_area']['id'] = 'field_farm_area';
   $handler->display->display_options['fields']['field_farm_area']['table'] = 'field_data_field_farm_area';
   $handler->display->display_options['fields']['field_farm_area']['field'] = 'field_farm_area';
+  /* Field: Log: Rating */
+  $handler->display->display_options['fields']['field_farm_rating']['id'] = 'field_farm_rating';
+  $handler->display->display_options['fields']['field_farm_rating']['table'] = 'field_data_field_farm_rating';
+  $handler->display->display_options['fields']['field_farm_rating']['field'] = 'field_farm_rating';
+  $handler->display->display_options['fields']['field_farm_rating']['click_sort_column'] = 'rating';
+  $handler->display->display_options['fields']['field_farm_rating']['settings'] = array(
+    'widget' => array(
+      'fivestar_widget' => 'default',
+    ),
+    'expose' => 1,
+    'style' => 'average',
+    'text' => 'average',
+  );
   /* Sort criterion: Log: Timestamp */
   $handler->display->display_options['sorts']['timestamp']['id'] = 'timestamp';
   $handler->display->display_options['sorts']['timestamp']['table'] = 'log';
