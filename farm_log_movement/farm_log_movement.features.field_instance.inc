@@ -299,16 +299,58 @@ function farm_log_movement_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'log-farm_movement-field_farm_time_spent'.
+  $field_instances['log-farm_movement-field_farm_time_spent'] = array(
+    'bundle' => 'farm_movement',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'How long did this movement take?',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'log',
+    'field_name' => 'field_farm_time_spent',
+    'label' => 'Time spent',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => ' hour|hours',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 8,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Assets');
   t('Files');
   t('From');
   t('Geometry');
+  t('How long did this movement take?');
   t('Notes');
   t('Photo(s)');
   t('Specify the area(s) that assets are being moved to. If you need to specify more precise locations, use the Geometry field below.');
   t('This field is optional. It allows you to specify a more precise geometry for assets referenced by this particular movement. If you leave it blank, the geometry will be copied from the area that assets are moving to (if available).');
+  t('Time spent');
   t('To');
   t('What assets are being moved?');
   t('Where is it moving from? This field is optional. You may leave this blank as a way of setting the initial location of an object.');

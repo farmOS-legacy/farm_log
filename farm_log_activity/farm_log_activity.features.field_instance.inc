@@ -262,15 +262,57 @@ function farm_log_activity_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'log-farm_activity-field_farm_time_spent'.
+  $field_instances['log-farm_activity-field_farm_time_spent'] = array(
+    'bundle' => 'farm_activity',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'How long did this activity take?',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'log',
+    'field_name' => 'field_farm_time_spent',
+    'label' => 'Time spent',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => ' hour|hours',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 8,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Areas');
   t('Assets');
   t('Files');
   t('Geometry');
+  t('How long did this activity take?');
   t('Notes');
   t('Photo(s)');
   t('This field is optional. It allows you to store geospatial data along with this activity.');
+  t('Time spent');
   t('What areas did this activity take place in?');
   t('What assets do this activity log pertain to?');
 
